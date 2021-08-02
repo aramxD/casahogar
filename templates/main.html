@@ -1,0 +1,170 @@
+ {% extends 'base/base.html' %} {%load static%}{% block content %}
+
+<section class="services container" id="servicio">
+    <h2 class="subtitulo">Nuestra Mision</h2>
+    <div class="container-servicio">
+        <img src="{% static 'img/helping.jpg'%}" alt="">
+        <div class="checklist-servicio">
+            <div class="service">
+                <h3 class="n-service"><span class="number">1</span>Nosotros</h3>
+                <p>Somos una Asociación Civil sin fines de lucro, con el propósito de atender a la población de la tercera edad en situación de abandono y brindarles un hogar donde vivan dignamente.</p>
+            </div>
+            <div class="service">
+                <h3 class="n-service"><span class="number">2</span>Ayudamos</h3>
+                <p>Dentro de la Casa Hogar Agnes Lester, A.C., las personas de la tercera edad en situación de abandono o de falta de cuidado albergadas son nuestra prioridad, para recibir cuidados y atención para su salud, contando con cuidadoras las 24
+                    horas del día</p>
+            </div>
+            <div class="service">
+                <h3 class="n-service"><span class="number">3</span>Equipo</h3>
+                <p>Contamos con personal médico y de enfermería, que dan servicios médicos generales y especializados, asistiendo con sus cuidados físicos tales como baño, corte de uñas, cambio de pañal, alimentación tres veces al día, control de enfermedades,
+                    toma de medicamentos, aseo de su habitación y lavado de su ropa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="gallery" id="portafolio">
+    <div class="container">
+        <h2 class="subtitulo">Galeria</h2>
+        <div class="container-portfolio">
+            {% for i in galeria %}
+            <img src="{{i.imagen.url}}" alt="{{i.alt}}" titulo={{i.titulo}} class="img-galeria"> {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="image-light" id="galeria">
+    <img src="{% static 'img/bx-x.svg' %}" alt="" class="close">
+    <div class="galeria-modal">
+        <img src="" alt="" class="agregar-imagen">
+        <!-- <div class="image-light-text">
+            <h2>titulo</h2>
+            <p>Soy una gran descripcion</p>
+            <div class="caption"></div>
+        </div> -->
+    </div>
+
+
+</section>
+
+<!-- Donaciones materiales -->
+<section class="container " id="donaciones">
+    <h2 class="subtitulo">Necesitamos materiales seguir ayudando</h2>
+    <div class="donacion">
+        <h3>Donacion en Especie</h3>
+        <p>Para darle la mejor calidad de vida a nuestros huespedes utilizamos: </p>
+        <div class="listados">
+            <div class="listado-donaciones">
+                <h4>Articulos de limpieza:</h4>
+                <ul>
+                    <li>- Guantes para limpieza general</li>
+                    <li>- Cloro</li>
+                    <li>- Detergente para ropa</li>
+                    <li>- Detergente para trastes</li>
+                    <li>- Mapeadores</li>
+                    <li>- Fabuloso</li>
+                    <li>- Franelas para la limpieza</li>
+                    <li>- Cepillos para sanitario</li>
+                </ul>
+            </div>
+
+            <div class="listado-donaciones">
+                <h4>Articulos de aseo personal:</h4>
+                <ul>
+                    <li>- Panales G y XG</li>
+                    <li>- Toallitas Humedas</li>
+                    <li>- papel Sanitario</li>
+                    <li>- Cepillo Dental</li>
+                    <li>- Rastrillos</li>
+                </ul>
+            </div>
+
+            <div class="listado-donaciones">
+                <h4>Medicamentos:</h4>
+                <ul>
+                    <li>- Valproato de Magnesio 250mg</li>
+                    <li>- Lozartan 50mg</li>
+                    <li>- Melatonina 5mg</li>
+                    <li>- pregabalina 75mg</li>
+                    <li>- Ambroxol</li>
+                    <li>- Flouxetina 20mg</li>
+                    <li>- Guantes latex</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Donaciones Dinero -->
+<section class="container ">
+    <h2 class="subtitulo">Necesitamos recursos para seguir ayudando</h2>
+    <div class="donacion">
+        <h3>Donacion Economica</h3>
+        <p>Somos una Asociación Civil Registrada con la capacidad de factura tu donativo </p>
+        <h4>Transferencia Electronica SPEI</h4>
+        <p>Banamex, Sucursal No. 025 a nombre de: “CASA HOGAR AGNES LESTER, A.C.”<br>a la Cuenta: xxxxxx5 con <br>Clabe Interbancaria: xxxxxxxxxxxxxxxxxxxx</p>
+        <div class="listados">
+
+
+            <div class="listado-donaciones">
+                <h4>Donativo PayPal</h4>
+                <p>Aqui va el formulario para donativo en Paypal</p>
+                <a href="#">Paypal</a>
+            </div>
+
+            <div class="listado-donaciones">
+                <h4>Apoyo Mensual</h4>
+                <p>Aqui va el formulario donativo mensual</p>
+                <a href="#">Suscripcion</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Donaciones Tiempo -->
+
+
+<section class=" container">
+    <div class="questions">
+
+        <div class="texto-question">
+            <h2>Tiempo, Manos o Voluntariado</h2>
+            <p>Tu puedes ser parte de este suenio y pasar tiempo de calidad con estas maravillosas personas que necesitan de nuestro apoyo. </p>
+            <a href="#">Contactanos</a>
+        </div>
+        <img src="{% static 'img/ayuda.jpg' %}">
+
+    </div>
+</section>
+
+
+<section class="container contacto" id="contacto">
+
+
+    <div class="secciones mapa">
+        <h2 class="subtitulo">Contacto</h2>
+        <p>Ven a visitarnos</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4693.791431885869!2d-117.01035775533633!3d32.438229326838446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d938cfef48a955%3A0xac956ac15a994b6c!2sCasa%20Hogar%20Agnes%20Lester%20Asilo%20de%20Ancianos!5e0!3m2!1sen!2smx!4v1627675110252!5m2!1sen!2smx"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+
+    <div class="secciones formulario">
+        <h2 class="subtitulo">Queremos leerte</h2>
+        <p>Ven a visitarnos</p>
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="telefono">Telefono</label><br>
+        <input type="text" id="telefono" name="telefono"><br>
+        <label for="email">Correo Electronico</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="mensaje">Mensaje</label><br>
+        <textarea name="mensaje" form=""></textarea><br>
+        <input type="submit">
+    </div>
+</section>
+{% endblock %}
