@@ -1,4 +1,4 @@
- {% extends 'base/base.html' %} {%load static%}{% block content %}
+{% extends 'base/base.html' %} {%load static%}{% block content %}
 
 <section class="services container" id="servicio">
     <h2 class="subtitulo">Nuestra Mision</h2>
@@ -30,7 +30,12 @@
         <h2 class="subtitulo">Galeria</h2>
         <div class="container-portfolio">
             {% for i in galeria %}
-            <img src="{{i.imagen.url}}" alt="{{i.alt}}" titulo={{i.titulo}} class="img-galeria"> {% endfor %}
+            <img src="{{i.imagen.url}}" alt="{{i.alt}}" titulo={{i.titulo}} class="img-galeria">
+            <!-- <div class="galeria-titulo">
+                <a href="{% url 'post' i.id %}">{{i.titulo}}</a>
+            </div> -->
+
+            {% endfor %}
         </div>
     </div>
 </section>

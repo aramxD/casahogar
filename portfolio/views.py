@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 # Create your views here.
-def main(request):
+def home(request):
     galeria = Portfolio.objects.all()
-
     context={
         'galeria' : galeria
     }
@@ -14,5 +13,12 @@ def contacto(request):
     return render (request, 'contacto.html')
 
 
-def portfolio(request):
-    return render (request, 'portfolio.html')
+def post(request, post_id):
+    post = get_object_or_404(Portfolio, pk=post_id)
+
+
+
+    context={
+        'post' : post
+    }
+    return render (request, 'portfolio.html', context)
